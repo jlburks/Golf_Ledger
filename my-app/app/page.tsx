@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+      {/* <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert h-5 w-[100px]"
           src="/next.svg"
@@ -64,6 +64,36 @@ export default function Home() {
             Documentation
           </a>
         </div>
+      </main> */}
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <h1 >Golf Ledger</h1>
+        <h1 >Par 5</h1>
+        <h1 >hole 7</h1>
+        <h1 >118 yds</h1>
+        <h1 >0 0 0 0 0 0 0</h1>
+        <span className="inline-grid grid-cols-3 gap-4">
+          <span>01</span>
+          <span>02</span>
+          <span>03</span>
+          <span>04</span>
+          <span>05</span>
+          <span>06</span>
+          <span>07</span>
+          <span>08</span>
+          <span>09</span>
+        </span>
+        <span className="inline-grid grid-cols-3 gap-4">
+          <span>10</span>
+          <span>11</span>
+          <span>12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+          <span>17</span> 
+          <span>18</span> 
+        </span>
+
       </main>
     </div>
   );
