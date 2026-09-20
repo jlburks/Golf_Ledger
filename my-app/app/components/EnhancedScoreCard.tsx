@@ -1,4 +1,8 @@
+
 import { SetStateAction, useState } from 'react';
+import Plays from './plays';
+
+import './EnhancedScoreCard.css'
 
 export default function EnhancedScoreCard() {
 
@@ -28,7 +32,7 @@ export default function EnhancedScoreCard() {
     h5:{
       yds:199,
       par:3,
-      hcp:51
+      hcp:15
     },
     h6:{
       yds:541,
@@ -57,9 +61,18 @@ export default function EnhancedScoreCard() {
   }
   return (
     <>
-    <h1>hole: {courseInfo[selecthole]["yds"]}</h1>
-    <h2>yds: {courseInfo[selecthole]["par"]}</h2>
-    <h2>dcp: {courseInfo[selecthole]["hcp"]}</h2>
+    <div className="holeDetails grid grid-flow-col justify-items-center">
+    <div>Hole {selecthole[1]}</div>
+    <div>Par {courseInfo[selecthole]["par"]}</div>
+    <div>handicap: {courseInfo[selecthole]["hcp"]}</div>
+    </div>
+    <div className="yardsRemaining">
+      <h1>244 YDS</h1>
+    </div>
+    <div className="golfStrokeTracker">
+    <Plays />
+    </div>
+
       <div className="grid grid-cols-9 gap-1">
         <button className="bg-blue-500" onClick={()=>currentHole("h1")}>01</button>
         <button className="bg-blue-500" onClick={()=>currentHole("h2")}>02</button>
