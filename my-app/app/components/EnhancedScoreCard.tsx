@@ -67,10 +67,10 @@ export default function EnhancedScoreCard() {
     <div>handicap: {courseInfo[selecthole]["hcp"]}</div>
     </div>
     <div className="yardsRemaining">
-      <h1>244 YDS</h1>
+      <h1>244 yds</h1>
     </div>
     <div className="golfStrokeTracker">
-    <Plays />
+    <Plays maxStrokes={4+(courseInfo[selecthole]["par"])}/>
     </div>
 
       <div className="grid grid-cols-9 gap-1">
